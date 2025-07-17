@@ -1,0 +1,94 @@
+/* index.css */
+
+/* Root variables for consistent theming */
+:root {
+  --primary-color: #1976d2; /* MUI primary blue */
+  --primary-dark-color: #115293;
+  --text-color: #333;
+  --background-color: #f4f6f8;
+  --card-background-color: #ffffff;
+  --border-radius: 8px;
+  --box-shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --font-family: "Inter", sans-serif; /* Using Inter for a modern look */
+}
+
+/* Base styles for the entire page */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh; /* Ensure body takes full viewport height */
+  display: flex;
+  flex-direction: column; /* Allows header, main, footer layout */
+}
+
+/* Main content area styling */
+#root {
+  flex: 1; /* Allows main content to grow and push footer down */
+  max-width: 960px; /* Increased max-width for a more spacious feel */
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+  width: 100%; /* Ensure it takes full width within max-width */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* General link styling */
+a {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none; /* No underline by default */
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--primary-dark-color);
+  text-decoration: underline; /* Underline on hover for clarity */
+}
+
+/* Button base styles (MUI buttons will override most of this, but good fallback) */
+button {
+  border-radius: var(--border-radius);
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s, color 0.25s;
+}
+
+/* Card styling (if you were to use a custom card, MUI Box with sx is preferred) */
+.card {
+  background-color: var(--card-background-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-light);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #root {
+    padding: 1.5rem 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #root {
+    padding: 1rem 0.5rem;
+  }
+  h1 {
+    font-size: 2.5em;
+  }
+}
+
+/* No specific styles for .logo, .logo.react, @keyframes logo-spin, .read-the-docs
+   as they seem to be remnants of a default React template and not directly
+   relevant to the URL shortener's core UI with Material-UI.
+   If you want a logo, it's best to integrate it directly into the Header component. */

@@ -1,0 +1,52 @@
+#root {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo {
+  height: 5rem;
+  padding: 1.5rem;
+  transition: filter 300ms ease-in-out;
+  will-change: filter;
+  display: inline-block;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 10px rgba(100, 108, 255, 0.6));
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 10px rgba(97, 218, 251, 0.6));
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo.spin {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin: 1rem 0;
+}
+
+.read-the-docs {
+  color: #777;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
